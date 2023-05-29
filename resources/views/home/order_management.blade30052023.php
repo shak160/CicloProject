@@ -40,10 +40,8 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Striped Table</h4>
-                    <p class="card-description">
-                        Add class <code>.table-striped</code>
-                    </p>
+                    <h4 class="card-title">Order Management</h4>
+                   
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -52,22 +50,22 @@
                                        S.No.
                                     </th>
                                     <th>
-                                        First name
+                                      Order
                                     </th>
                                     <th>
-                                        Progress
+                                        Order Medicine
                                     </th>
                                     <th>
-                                        Amount
+                                        Select Medicine and quantity
                                     </th>
                                     <th>
-                                       Status
+                                       select billing cycle
                                     </th>
                                     <th>
-                                        Status
+                                        Details
                                      </th>
                                      <th>
-                                        Status
+                                        Track Order
                                      </th>
                                      <th>
                                         Status
@@ -80,7 +78,19 @@
                                        1
                                     </td>
                                     <td>
-                                        Herman Beck
+                                        NA
+                                    </td>
+                                    <td>
+                                        NA
+                                    </td>
+                                    <td>
+                                       1000
+                                    </td>
+                                    <td>
+                                        NA
+                                    </td>
+                                    <td>
+                                        NA
                                     </td>
                                     <td>
                                         <div class="progress">
@@ -90,19 +100,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        $ 77.99
-                                    </td>
-                                    <td>
-                                        May 15, 2015
-                                    </td>
-                                    <td>
-                                        May 15, 2015
-                                    </td>
-                                    <td>
-                                        May 15, 2015
-                                    </td>
-                                    <td>
-                                        May 15, 2015
+                                        NA
                                     </td>
                                 </tr>
                             </tbody>

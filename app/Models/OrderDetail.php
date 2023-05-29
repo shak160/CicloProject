@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDetail extends Model
 {
     use HasFactory;
-    protected $table = 'order_details';
+
+    protected $table = 'patient_order_details';
 
     protected $fillable = [
         'patient_id',
@@ -24,4 +25,29 @@ class OrderDetail extends Model
         'created_at',
         'updated_at',
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
+    public function OrderStatus()
+    {
+        return $this->hasOne('App\Models\OrderStatus', 'order_id')->orderBy('created_at', 'DESC');
+    }
+
+    public function MedicineDetail()
+    {
+        return $this->hasOne('App\Models\MedicineDetail', 'id', 'medication_id');
+    }
+
+    public function PrescriptionDetail()
+    {
+        return $this->hasOne('App\Models\PrescriptionDetail', 'id', 'prescription_id');
+    }
 }
