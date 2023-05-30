@@ -167,7 +167,7 @@
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">First Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="first_name" type="text" class="form-control" id="FirstName" value="{{$patient_data->first_name}}">
+                        <input name="first_name" type="text" class="form-control" id="FirstName" value="{{$patient_data->name}}">
                       </div>
                     </div>
                     <div class="row mb-3">

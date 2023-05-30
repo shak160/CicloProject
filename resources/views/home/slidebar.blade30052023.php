@@ -1,14 +1,14 @@
 <aside id="sidebar" class="sidebar">
-
+ 
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link collapsed"
-                href="{{route('home')}}">
+            <a class="nav-link collapsed" 
+                href="{{route('patient_dashboard')}}">
                 <i class="bi bi-menu-button-wide"></i><span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <a class="nav-link collapsed" href="{{route('chatify')}}">
                 <i class="bi bi-layout-text-window-reverse"></i><span>Message</span>
             </a>
         </li><!-- End Tables Nav -->

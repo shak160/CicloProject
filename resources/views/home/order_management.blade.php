@@ -41,7 +41,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Order Management</h4>
-                   
+
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -50,59 +50,39 @@
                                        S.No.
                                     </th>
                                     <th>
-                                      Order
+                                        Medicine Name
                                     </th>
                                     <th>
-                                        Order Medicine
+                                        Medicine quantity
                                     </th>
                                     <th>
-                                        Select Medicine and quantity
+                                       Pending Suply Days
                                     </th>
-                                    <th>
-                                       select billing cycle
-                                    </th>
-                                    <th>
-                                        Details
-                                     </th>
-                                     <th>
-                                        Track Order
-                                     </th>
                                      <th>
                                         Status
                                      </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td >
-                                       1
-                                    </td>
-                                    <td>
-                                        NA
-                                    </td>
-                                    <td>
-                                        NA
-                                    </td>
-                                    <td>
-                                       1000
-                                    </td>
-                                    <td>
-                                        NA
-                                    </td>
-                                    <td>
-                                        NA
-                                    </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        NA
-                                    </td>
-                                </tr>
+                                @foreach ($orders as $key => $order)
+                                    <tr>
+                                        <td>
+                                        {{$key+1}}
+                                        </td>
+                                        <td>
+                                            {{ $order->MedicineDetail->med_name }}
+                                        </td>
+                                        <td>
+                                            {{ $order->MedicineDetail->quantity }}
+                                        </td>
+                                        <td>
+                                            {{-- {{ $order->MedicineDetail->quantity }} --}}
+                                        </td>
+                                        <td>
+                                            {{ $order->OrderStatus->status }}
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

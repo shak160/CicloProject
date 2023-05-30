@@ -9,6 +9,7 @@ use Auth;
 use DB;
 use App\Models\User;
 use App\Models\UserDetails;
+use function helper;
 
 class PatientProfileController extends Controller
 {
@@ -29,7 +30,7 @@ class PatientProfileController extends Controller
         'usersdetails.current_medications',
         'usersdetails.driver_license_id',
         'usersdetails.userId','usersdetails.metadata')->first();
-
+        // dd($patient_data);
         return view('home.patient_profile',compact('patient_data'));
     }
 
@@ -63,7 +64,7 @@ class PatientProfileController extends Controller
         // dd($request,$id);
         DB::transaction(function () use ($id, $request) {
             $user = User::find($id);
-            $user->first_name=$request->first_name;
+            $user->name=$request->first_name;
             $user->last_name=$request->last_name;
             $user->email=$request->email;
             $user->date_of_birth=$request->dateOfBirth;
